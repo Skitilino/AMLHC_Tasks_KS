@@ -8,7 +8,7 @@ from sklearn.preprocessing import StandardScaler, MinMaxScaler
 # Datensatz laden
 df = pd.read_csv('diabetes.csv')
 
-print("✅ Datensatz erfolgreich geladen!")
+print("Datensatz erfolgreich geladen!")
 print(df.head())  # Zeigt die ersten Zeilen zur Kontrolle
 
 # IQR-basierte Erkennung von Ausreißern
@@ -30,7 +30,7 @@ print(df_outliers.isnull().sum())
 
 # Entfernen unvollständiger Zeilen
 df_complete = df_outliers.dropna()
-print("\n✅ Neue Dimensionen nach Bereinigung:", df_complete.shape)
+print("\n Neue Dimensionen nach Bereinigung:", df_complete.shape)
 
 # Merkmalsranking mit Chi-Quadrat
 X = df_complete.drop(columns=['class'])  # Unabhängige Variablen
@@ -47,7 +47,7 @@ chi_scores, p_values = chi2(X_scaled, y)
 chi2_results = pd.DataFrame({'Feature': X.columns, 'Chi2 Score': chi_scores, 'P-Value': p_values})
 chi2_results = chi2_results.sort_values(by='Chi2 Score', ascending=False)
 
-print("\n🔢 Feature-Ranking nach Chi-Quadrat:")
+print("\n Feature-Ranking nach Chi-Quadrat:")
 print(chi2_results)
 
 #  Boxplot & Histogramm für wichtigstes und unwichtigstes Feature
