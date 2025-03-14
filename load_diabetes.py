@@ -25,7 +25,7 @@ def detect_outliers_iqr(dataframe):
 
 # Anwenden der IQR-Methode
 df_outliers = detect_outliers_iqr(df)
-print("\n🔍 Fehlende Werte nach Ausreißer-Erkennung:")
+print("\n Fehlende Werte nach Ausreißer-Erkennung:")
 print(df_outliers.isnull().sum())
 
 # Entfernen unvollständiger Zeilen
