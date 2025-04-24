@@ -6,7 +6,7 @@ from sklearn.feature_selection import chi2
 from sklearn.preprocessing import StandardScaler, MinMaxScaler
 
 # Datensatz laden
-df = pd.read_csv('diabetes.csv')
+df = pd.read_csv('data/diabetes.csv')
 
 print("Datensatz erfolgreich geladen!")
 print(df.head())  # Zeigt die ersten Zeilen zur Kontrolle

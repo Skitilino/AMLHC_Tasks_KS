@@ -4,7 +4,7 @@ from sklearn.decomposition import PCA
 from sklearn.preprocessing import StandardScaler
 
 # 1️ Datensatz laden
-file_path = "food.csv"  # Falls die Datei in demselben Ordner liegt
+file_path = "data/food.csv" # Falls die Datei im demselben Ordner liegt
 food_data = pd.read_csv(file_path)
 
 # Überblick über die Daten
